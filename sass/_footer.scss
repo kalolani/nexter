@@ -1,0 +1,49 @@
+.footer {
+  background-color: $color-secondary;
+  grid-column: full-start/full-end;
+
+  padding: 8rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  &__nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+
+    &--link,
+    &--visited {
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.4rem;
+      font-family: $font-display;
+      text-transform: uppercase;
+      padding: 1.3rem;
+      display: block;
+      transition: all 0.2s;
+    }
+
+    &--link:hover,
+    &--link:visited {
+      background-color: rgba($color: $color-grey-light-2, $alpha: 0.1);
+      transform: translateY(-3px);
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    color: $color-grey-light-2;
+    margin: 0 auto;
+    margin-top: 6rem;
+    text-align: center;
+    padding: 0 6rem;
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2rem;
+    }
+  }
+}
